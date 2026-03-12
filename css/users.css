@@ -886,7 +886,7 @@ body {
 /* Ajustes para telas muito pequenas (smartphones) */
 @media (max-width: 480px) {
     .music-container {
-        border: 4px solid rgba(175, 175, 175, 0.034);
+        border: 2px solid rgba(175, 175, 175, 0.034);
         min-height: auto; /* let height shrink to content */
         max-width: 90%; /* Aumenta a largura máxima para ocupar mais espaço */
         border-radius: 10px; /* Reduz o border-radius para telas pequenas */
@@ -896,14 +896,18 @@ body {
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
-        padding: 12px 8px;
+        padding: 8px 6px; /* reduce padding for shorter box */
         width: 90%;
         margin-top: 0 !important; /* override inline negative margin */
+        background: transparent; /* remove dark backdrop */
+        backdrop-filter: blur(4px); /* subtle blur only */
     }
 
     .music-player {
         max-width: none;
         width: 100%;
+        background: rgba(0,0,0,0.2); /* lighter player background */
+        padding: 4px 6px; /* reduce internal padding */
     }
 }
 

@@ -882,22 +882,6 @@ body {
     }
 }
 
-/* Ajustes para telas muito pequenas (smartphones) */
-@media (max-width: 480px) {
-    .music-container {
-        display: none; /* hide audio controls on mobile */
-    }
-}
-
-/* Ajustes para telas muito pequenas (smartphones) */
-@media (max-width: 413px) {
-    .music-container {
-        max-width: 70%; /* Aumenta a largura máxima para ocupar mais espaço */
-        border-radius: 10px; /* Reduz o border-radius para telas pequenas */
-        bottom: 60px;
-    }
-}
-
 .music-player {
     width: 100%;
     max-width: 500px;
@@ -970,13 +954,6 @@ body {
     }
 }
 
-/* extra tweaks for ultra‑narrow phones */
-@media (max-width: 360px) {
-    .music-container {
-        margin-top: 20px;
-    }
-}
-
 .music-player .player-timeline {
     margin-top: -12px;
 }
@@ -1011,6 +988,7 @@ body {
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    pointer-events: auto;
 }
 
 .play-pause:hover, .pause-icon:hover {

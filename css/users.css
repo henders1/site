@@ -887,11 +887,23 @@ body {
 @media (max-width: 480px) {
     .music-container {
         border: 4px solid rgba(175, 175, 175, 0.034);
-        min-height: 10rem; /* Reduz a altura mínima */
+        min-height: auto; /* let height shrink to content */
         max-width: 90%; /* Aumenta a largura máxima para ocupar mais espaço */
         border-radius: 10px; /* Reduz o border-radius para telas pequenas */
         margin: 0 auto 60px;
         bottom: auto;
+        /* reposition floating player to bottom center */
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 8px;
+        width: 90%;
+        margin-top: 0 !important; /* override inline negative margin */
+    }
+
+    .music-player {
+        max-width: none;
+        width: 100%;
     }
 }
 
@@ -1004,6 +1016,10 @@ body {
     }
     .play-pause, .pause-icon {
         font-size: 32px;
+    }
+    .music-container {
+        width: 95%;
+        bottom: 10px;
     }
 }
 

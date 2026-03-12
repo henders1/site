@@ -906,7 +906,7 @@ body {
     .music-player {
         max-width: none;
         width: 100%;
-        background: rgba(0,0,0,0.2); /* lighter player background */
+        background: transparent;
         padding: 4px 6px; /* reduce internal padding */
     }
 }

@@ -963,13 +963,18 @@ body {
 /* mobile adjustments */
 @media (max-width: 480px) {
     .music-container {
-        display: none; /* hide on mobile */
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 /* extra tweaks for ultra‑narrow phones */
 @media (max-width: 360px) {
-    /* button stays same size */
+    .music-container {
+        margin-top: 20px;
+    }
 }
 
 .music-player .player-timeline {

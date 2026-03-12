@@ -954,6 +954,23 @@ body {
     opacity: 1.0 !important;
 }
 
+/* mobile adjustments */
+@media (max-width: 480px) {
+    .music-player .player-controls {
+        font-size: 36px;
+        gap: 2rem;
+        padding: 0 10px;
+    }
+
+    .timeline {
+        margin: 0 6px;
+    }
+
+    .current-time, .total-time {
+        font-size: 0.85rem;
+    }
+}
+
 .music-player .player-timeline {
     margin-top: -12px;
 }
@@ -965,8 +982,11 @@ body {
 
 .player-controls {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    gap: 1.5rem; /* spread icons out */
+    padding: 0 20px;
 }
 
 .timeline {
@@ -975,6 +995,7 @@ body {
     background-color: #ffffff36;
     border-radius: 2px;
     position: relative;
+    margin: 0 10px; /* give spacing from controls */
 }
 
 .timeline-progress {

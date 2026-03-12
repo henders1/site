@@ -69,14 +69,22 @@ function criarLockscreen() {
       if (desbloqueado) return; // Se já foi desbloqueado, não faz nada
       desbloqueado = true; // Marca como desbloqueado
 
-      // Garantir que o vídeo seja reproduzido via gesto do usuário (para mobile)
+      // Ensure background video stays muted (no sound in mobile browser)
       const bgVideo = document.getElementById('backgroundVideo');
       if (bgVideo) {
-          bgVideo.muted = false;
-          bgVideo.volume = 0.5;
+          bgVideo.muted = true;
+          bgVideo.volume = 0;
           bgVideo.play().catch(() => {
-              // Ignorar erros se o vídeo não puder iniciar
+              // ignore errors if video can't start
           });
+      }
+
+      // Start background music player as part of the same user gesture
+      const audioPlayer = document.querySelector('.audioPlayer');
+      if (audioPlayer) {
+          audioPlayer.muted = false;
+          audioPlayer.volume = 0.5;
+          audioPlayer.play().catch(() => {/* ignore */});
       }
       
       // Parar a animação de pulso removendo a classe

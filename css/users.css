@@ -968,19 +968,42 @@ body {
 @media (max-width: 480px) {
     .music-player {
         padding: 6px 10px;
+        max-width: 95%; /* use most of the available space */
     }
     .music-player .player-controls {
         font-size: 32px;
-        gap: 1.2rem;
-        padding: 0 6px;
+        gap: 1.5rem; /* a little more breathing room */
+        padding: 0 4px;
+        flex-wrap: wrap;          /* allow icons to wrap on very narrow screens */
+        justify-content: center;
+    }
+    .music-player .player-controls svg {
+        flex-shrink: 0; /* prevent icons from collapsing too much */
+    }
+    .play-pause, .pause-icon {
+        font-size: 36px;
+    }
+    .prev, .next {
+        width: 1.1em;
+        height: 1.1em;
     }
 
     .timeline {
-        margin: 0 4px;
+        margin: 0 2px;
     }
 
     .current-time, .total-time {
         font-size: 0.75rem;
+    }
+}
+
+/* extra tweaks for ultra‑narrow phones */
+@media (max-width: 360px) {
+    .music-player .player-controls {
+        gap: 1rem;
+    }
+    .play-pause, .pause-icon {
+        font-size: 32px;
     }
 }
 

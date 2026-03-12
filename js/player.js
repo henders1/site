@@ -25,19 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Delay de 2 segundos após o primeiro clique
         setTimeout(() => {
-            audio.play();
+            audio.muted = false;
+            audio.volume = 0.5;
+            audio.play().catch(() => {});
             playIcon.style.display = 'none';
             pauseIcon.style.display = 'block';
         }, 2000);
     }
 
-    // Adiciona evento de clique no site para habilitar o autoplay
-    document.addEventListener('click', () => {
-        if (!firstClickHappened) {
-            firstClickHappened = true;
-            autoPlayWithDelay();
-        }
-    });
+    // The lockscreen click already starts playback; no additional global click needed
+    // document.addEventListener('click', () => {
+    //     if (!firstClickHappened) {
+    //         firstClickHappened = true;
+    //         autoPlayWithDelay();
+    //     }
+    // });
 
     // Função para pular para frente ou para trás
     function skipTime(direction) {

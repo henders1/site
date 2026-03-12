@@ -886,29 +886,7 @@ body {
 /* Ajustes para telas muito pequenas (smartphones) */
 @media (max-width: 480px) {
     .music-container {
-        border: 2px solid rgba(175, 175, 175, 0.034);
-        min-height: auto;
-        border-radius: 10px;
-        bottom: auto;
-        /* center with profile box */
-        position: fixed;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-        width: 80vw;
-        max-width: 280px;
-        padding: 6px 4px;
-        margin: 0;
-        margin-top: 0 !important;
-        background: transparent;
-        backdrop-filter: blur(4px);
-    }
-
-    .music-player {
-        max-width: none;
-        width: 100%;
-        background: transparent;
-        padding: 0;
+        display: none; /* hide audio controls on mobile */
     }
 }
 

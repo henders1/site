@@ -74,6 +74,14 @@ function criarLockscreen() {
       if (bgVideo) {
           bgVideo.muted = true;
           bgVideo.volume = 0;
+          bgVideo.setAttribute('muted','');
+          // re‑enforce if any script tries to unmute
+          bgVideo.addEventListener('volumechange', () => {
+              if (!bgVideo.muted || bgVideo.volume !== 0) {
+                  bgVideo.muted = true;
+                  bgVideo.volume = 0;
+              }
+          });
           bgVideo.play().catch(() => {
               // ignore errors if video can't start
           });

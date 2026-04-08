@@ -561,7 +561,11 @@ body {
     object-fit: contain;
     border-radius: 0;
     filter: none;
-    opacity: 1;
+    opacity: 0.96;
+    width: 1.55rem;
+    height: 1.55rem;
+    transform: translateY(0.5px);
+    filter: drop-shadow(0 0 0.6px rgba(255, 255, 255, 0.9));
 }
 
 /* Scale icon on hover (smaller than full link scale) */

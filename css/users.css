@@ -500,7 +500,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.1rem;
+    gap: 1.85rem;
     margin-top: 0.9rem;
     width: 100%;
     cursor: url('/img/extralsmall.png') !important;
@@ -519,8 +519,8 @@ body {
     display: flex;
     align-items: stretch;
     justify-content: center;
-    gap: 0.7rem;
-    width: min(34rem, 100%);
+    gap: 1.15rem;
+    width: min(39rem, 100%);
 }
 
 /* Ajustes para telas */
@@ -612,10 +612,10 @@ body {
 .container .linkedAccounts .project-side-button {
     flex: 1 1 0;
     width: auto;
-    max-width: 16.5rem;
-    min-height: 5.2rem;
+    max-width: 19rem;
+    min-height: 6rem;
     border-radius: 0.75rem;
-    padding: 0.8rem 1rem;
+    padding: 0.95rem 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -635,21 +635,21 @@ body {
 }
 
 .container .linkedAccounts .project-side-button .project-title {
-    font-size: 1.15rem;
+    font-size: 1.28rem;
     font-weight: 700;
     letter-spacing: 0.02em;
 }
 
 .container .linkedAccounts .project-side-button .project-subtitle {
     margin-top: 0.28rem;
-    font-size: 0.95rem;
+    font-size: 1.02rem;
     font-weight: 500;
     opacity: 0.8;
 }
 
 @media (max-width: 980px) {
     .container .linkedAccounts .project-side-button {
-        max-width: 16rem;
+        max-width: 18rem;
     }
 }
 

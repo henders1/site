@@ -278,7 +278,14 @@ body {
 @media (max-width: 480px) {
     .container .profileLayout .profileBio {
         margin-top: 5px;
-        height: 1px;
+        height: auto; /* allow typed text to display without clipping */
+        min-height: 22px;
+    }
+
+    /* Ensure linked icons / buttons sit below the bio on small screens */
+    .container .linkedAccounts {
+        margin-top: 12px;
+        gap: 1.2rem;
     }
 }
 

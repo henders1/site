@@ -19,8 +19,8 @@
         <section class="portfolio-list">
             <article class="portfolio-entry">
                 <div class="entry-meta">Web Tool  *  Featured</div>
-                <a class="entry-title" href="https://example.com/replace-this" target="_blank" rel="noopener noreferrer">Random Placeholder Project</a>
-                <p class="entry-description">This is random placeholder text so you can edit title, description, and link to anything you want later.</p>
+                <a class="entry-title" href="" target="_blank" rel="noopener noreferrer">Exteral CS2 Skin Changer</a>
+                <p class="entry-description">Currently under development</p>
             </article>
         </section>
     </main>

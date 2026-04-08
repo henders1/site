@@ -65,11 +65,12 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 12px 10px; /* Slightly less vertical padding on mobile */
-        min-height: 10rem; /* Reduce minimum height to avoid extra space */
+        min-height: 16rem; /* Increase minimum height so content fits comfortably */
+        padding-bottom: 24px; /* extra bottom space inside the big box */
         max-width: 95%;
         border-radius: 10px;
-        margin-top: 20px; /* move the whole profile area up on small screens */
-        margin-bottom: 0; /* remove the lower gray gap that allowed scrolling */
+        margin-top: 20px; /* keep profile area up on small screens */
+        margin-bottom: 0; /* remove the lower gray gap */
         border: 3px solid rgba(175, 175, 175, 0.034);
         height: auto;
     }
@@ -80,6 +81,23 @@ body {
 
     .container .profileLayout .profileUsername span {
         font-size: 28px;
+    }
+
+    /* Push the music controls lower on phones (override inline negative margin) */
+    .music-container {
+        margin-top: 28px !important;
+    }
+
+    .music-player {
+        padding-top: 10px; /* give space above controls */
+    }
+
+    .music-player .player-controls {
+        margin-top: 8px;
+    }
+
+    .play-pause, .pause-icon {
+        margin-top: 8px;
     }
 }
 

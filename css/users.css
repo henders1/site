@@ -513,6 +513,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    width: min(44rem, 100%);
 }
 
 .container .linkedAccounts .projectBoxes {
@@ -520,7 +521,7 @@ body {
     align-items: stretch;
     justify-content: center;
     gap: 1.15rem;
-    width: min(56rem, 100%);
+    width: min(44rem, 100%);
 }
 
 /* Ajustes para telas */
@@ -629,10 +630,10 @@ body {
 }
 
 /* Asymmetric widths: left = wide, right = narrow (horizontal only) */
-.container .linkedAccounts .projectBoxes .project-side-button:first-child,
-.container .linkedAccounts .projectBoxes .project-side-button:last-child {
-    flex: 0 0 48%;
+.container .linkedAccounts .projectBoxes .project-side-button:first-child {
+    flex: 0 0 100%;
     max-width: none;
+    width: 100%;
 }
 
 @media (max-width: 620px) {

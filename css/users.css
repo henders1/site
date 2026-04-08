@@ -629,13 +629,10 @@ body {
 }
 
 /* Asymmetric widths: left = wide, right = narrow (horizontal only) */
-.container .linkedAccounts .projectBoxes .project-side-button:first-child {
-    flex: 0 0 74%;
-    max-width: none;
-}
+.container .linkedAccounts .projectBoxes .project-side-button:first-child,
 .container .linkedAccounts .projectBoxes .project-side-button:last-child {
-    flex: 0 0 24%;
-    max-width: 13rem;
+    flex: 0 0 48%;
+    max-width: none;
 }
 
 @media (max-width: 620px) {

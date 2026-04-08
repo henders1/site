@@ -557,6 +557,12 @@ body {
     height: 1.4rem;
 }
 
+.container .linkedAccounts .linked-account-custom-icon {
+    object-fit: contain;
+    border-radius: 0.35rem;
+    filter: saturate(0.95) brightness(1.02);
+}
+
 /* Scale icon on hover (smaller than full link scale) */
 .container .linkedAccounts a:hover svg,
 .container .linkedAccounts a:hover img {

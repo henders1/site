@@ -90,8 +90,10 @@ function criarLockscreen() {
       // Start background music player as part of the same user gesture
       const audioPlayer = document.querySelector('.audioPlayer');
       if (audioPlayer) {
+          const isDesktop = window.matchMedia('(pointer: fine)').matches;
+          const initialVolume = isDesktop ? 0.12 : 0.04;
           audioPlayer.muted = false;
-          audioPlayer.volume = 0.5;
+          audioPlayer.volume = initialVolume;
           audioPlayer.play().catch(() => {/* ignore */});
       }
       

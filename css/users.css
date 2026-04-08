@@ -65,11 +65,11 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 12px 10px; /* Slightly less vertical padding on mobile */
-        min-height: 16rem; /* Increase minimum height so content fits comfortably */
-        padding-bottom: 24px; /* extra bottom space inside the big box */
+        min-height: 22rem; /* Further increase height so content fits comfortably */
+        padding-bottom: 32px; /* extra bottom space inside the big box */
         max-width: 95%;
         border-radius: 10px;
-        margin-top: 20px; /* keep profile area up on small screens */
+        margin-top: 40px; /* pull the big box down more on small screens */
         margin-bottom: 0; /* remove the lower gray gap */
         border: 3px solid rgba(175, 175, 175, 0.034);
         height: auto;
@@ -85,19 +85,19 @@ body {
 
     /* Push the music controls lower on phones (override inline negative margin) */
     .music-container {
-        margin-top: 28px !important;
+        margin-top: 40px !important;
     }
 
     .music-player {
-        padding-top: 10px; /* give space above controls */
+        padding-top: 14px; /* give more space above controls */
     }
 
     .music-player .player-controls {
-        margin-top: 8px;
+        margin-top: 12px;
     }
 
     .play-pause, .pause-icon {
-        margin-top: 8px;
+        margin-top: 12px;
     }
 }
 

@@ -560,8 +560,8 @@ body {
 .container .linkedAccounts .linked-account-custom-icon {
     object-fit: contain;
     border-radius: 0;
-    filter: brightness(0) invert(1) contrast(1.05);
-    opacity: 0.95;
+    filter: none;
+    opacity: 1;
 }
 
 /* Scale icon on hover (smaller than full link scale) */

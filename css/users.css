@@ -628,6 +628,25 @@ body {
     transition: all 0.25s ease;
 }
 
+/* Asymmetric widths: left = wide, right = narrow (horizontal only) */
+.container .linkedAccounts .projectBoxes .project-side-button:first-child {
+    flex: 0 0 74%;
+    max-width: none;
+}
+.container .linkedAccounts .projectBoxes .project-side-button:last-child {
+    flex: 0 0 24%;
+    max-width: 13rem;
+}
+
+@media (max-width: 620px) {
+    /* Restore stacking and full width on small screens */
+    .container .linkedAccounts .projectBoxes .project-side-button:first-child,
+    .container .linkedAccounts .projectBoxes .project-side-button:last-child {
+        flex: 1 1 0;
+        max-width: 100%;
+    }
+}
+
 .container .linkedAccounts .project-side-button:hover {
     background: rgba(255, 255, 255, 0.17);
     transform: translateY(-1px);

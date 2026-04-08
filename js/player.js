@@ -25,8 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Delay de 2 segundos após o primeiro clique
         setTimeout(() => {
+            const isDesktop = window.matchMedia('(pointer: fine)').matches;
+            const initialVolume = isDesktop ? 0.12 : 0.04;
             audio.muted = false;
-            audio.volume = 0.5;
+            audio.volume = initialVolume;
             audio.play().catch(() => {});
             playIcon.style.display = 'none';
             pauseIcon.style.display = 'block';

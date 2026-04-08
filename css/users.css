@@ -516,11 +516,11 @@ body {
 }
 
 .container .linkedAccounts .projectBoxes {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(13.5rem, 16.5rem));
+    display: flex;
+    align-items: stretch;
     justify-content: center;
-    gap: 1rem;
-    width: 100%;
+    gap: 0.7rem;
+    width: min(34rem, 100%);
 }
 
 /* Ajustes para telas */
@@ -610,7 +610,9 @@ body {
 }
 
 .container .linkedAccounts .project-side-button {
-    width: 100%;
+    flex: 1 1 0;
+    width: auto;
+    max-width: 16.5rem;
     min-height: 5.2rem;
     border-radius: 0.75rem;
     padding: 0.8rem 1rem;
@@ -646,9 +648,15 @@ body {
 }
 
 @media (max-width: 980px) {
+    .container .linkedAccounts .project-side-button {
+        max-width: 16rem;
+    }
+}
+
+@media (max-width: 620px) {
     .container .linkedAccounts .projectBoxes {
-        grid-template-columns: 1fr;
-        max-width: 20rem;
+        flex-direction: column;
+        width: min(20rem, 100%);
     }
 
     .container .linkedAccounts .project-side-button {
